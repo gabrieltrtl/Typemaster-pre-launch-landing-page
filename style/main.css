@@ -4,6 +4,7 @@
   padding: 0.6875rem 0.875rem;
   font-weight: 700;
   line-height: 1.625;
+  text-transform: uppercase;
 }
 @media (min-width: 43.75rem) {
   .btn-1,
@@ -54,6 +55,7 @@ img, picture, video, canvas, svg {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
 }
 
 button {
@@ -66,4 +68,24 @@ body {
 
 body {
   font-family: "Barlow", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4375rem 1.5rem 0px 1.5rem;
+  margin-bottom: 4rem;
+}
+@media (min-width: 43.75rem) {
+  .header {
+    padding: 2.5rem 2.5rem 0 2.5rem;
+  }
+}
+@media (min-width: 75rem) {
+  .header {
+    padding: 3.4375rem 0 0 0;
+    max-width: 69.375rem;
+    margin: 0 auto 5.1875rem auto;
+  }
 }/*# sourceMappingURL=main.css.map */

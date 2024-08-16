@@ -4,6 +4,7 @@
   padding: 0.6875rem 0.875rem;
   font-weight: 700;
   line-height: 1.625;
+  text-transform: uppercase;
   @include device(tablet) {
     padding: 16px 27px;
   }
