@@ -1,0 +1,29 @@
+.btn-1,
+.btn-2 {
+  border-radius: 8px;
+  padding: 0.6875rem 0.875rem;
+  font-weight: 700;
+  line-height: 1.625;
+  @include device(tablet) {
+    padding: 16px 27px;
+  }
+}
+
+.btn-1 {
+  background-color: $color3;
+  color: $color6;
+  &:hover {
+    cursor: pointer;
+    background-color: #FF9B62;
+  }
+}
+
+.btn-2 {
+  background-color: $color5;
+  color: $color1;
+  &:hover {
+    cursor: pointer;
+    background-color: $color1;
+    color: $color6;
+  }
+}
