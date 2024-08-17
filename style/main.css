@@ -91,7 +91,7 @@ body {
 }
 
 .intro {
-  padding: 0 24px;
+  overflow: hidden;
 }
 @media (min-width: 43.75rem) {
   .intro {
@@ -102,6 +102,11 @@ body {
   }
 }
 
+.intro__content-wrapper {
+  margin-bottom: 64px;
+  padding: 0 24px;
+}
+
 .intro__title {
   font-size: 48px;
   font-weight: 900;
@@ -109,8 +114,11 @@ body {
   color: #162542;
   margin-bottom: 32px;
 }
-.intro__img {
-  display: none;
+.intro__img img {
+  margin-left: auto;
+  border-radius: 15px;
+  transform: translateX(21px);
+  max-width: 372px;
 }
 @media (min-width: 43.75rem) {
   .intro__img {

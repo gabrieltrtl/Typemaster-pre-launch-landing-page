@@ -28,13 +28,18 @@ body {
 
 // Intro
 .intro {
-  padding: 0 24px;
+  overflow: hidden;
   @include device(tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     padding: 0;
   }
+}
+
+.intro__content-wrapper {
+  margin-bottom: 64px;
+  padding: 0 24px;
 }
 
 .intro__title {
@@ -49,7 +54,13 @@ body {
 }
 
 .intro__img {
-  display: none;
+  
+  img {
+    margin-left: auto;
+    border-radius: 15px;
+    transform: translateX(21px);
+    max-width: 372px;
+  }
   @include device(tablet) {
     display: block;
   }
