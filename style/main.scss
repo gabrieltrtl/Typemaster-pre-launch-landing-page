@@ -29,10 +29,10 @@ body {
 // Intro
 .intro {
   overflow: hidden;
+  position: relative;
   @include device(tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
     padding: 0;
   }
 }
@@ -40,6 +40,9 @@ body {
 .intro__content-wrapper {
   margin-bottom: 64px;
   padding: 0 24px;
+  @include device(tablet) {
+    padding: 0 0 0 40px;
+  }
 }
 
 .intro__title {
@@ -49,20 +52,20 @@ body {
   color: $color1;
   margin-bottom: 32px;
   @include device(tablet) {
-
   }
 }
 
 .intro__img {
-  
   img {
     margin-left: auto;
     border-radius: 15px;
     transform: translateX(21px);
-    max-width: 372px;
+    @include device(tablet) {
+      
+    }
   }
   @include device(tablet) {
-    display: block;
+    
   }
 }
 
@@ -71,15 +74,12 @@ body {
   line-height: 1.625;
   margin-bottom: 32px;
   @include device(tablet) {
-    
   }
 }
 
 .intro__btn {
   margin-right: 32px;
   @include device(tablet) {
-    grid-column: 1;
-    justify-self: start;
   }
 }
 
