@@ -68,6 +68,7 @@ body {
 
 body {
   font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
 }
 
 .header {
@@ -93,6 +94,13 @@ body {
 .main__container {
   overflow: hidden;
 }
+@media (min-width: 75rem) {
+  .main__container {
+    max-width: 1110px;
+    margin: 0 auto;
+    overflow: initial;
+  }
+}
 
 .intro {
   position: relative;
@@ -100,8 +108,21 @@ body {
 @media (min-width: 43.75rem) {
   .intro {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(379px, 1fr) 1fr;
     padding: 0;
+    gap: 69px;
+  }
+}
+@media (min-width: 75rem) {
+  .intro::after {
+    content: "";
+    display: inline-block;
+    width: 255px;
+    height: 240px;
+    background-color: #E8EFF2;
+    position: absolute;
+    right: -285px;
+    border-radius: 20px;
   }
 }
 
@@ -111,8 +132,13 @@ body {
 }
 @media (min-width: 43.75rem) {
   .intro__content-wrapper {
-    padding: 2.5rem 0 0 2.5rem;
+    padding: 60px 0 0 40px;
     margin-bottom: 6.25rem;
+  }
+}
+@media (min-width: 75rem) {
+  .intro__content-wrapper {
+    padding: initial;
   }
 }
 
@@ -122,7 +148,14 @@ body {
   text-transform: uppercase;
   color: #162542;
   margin-bottom: 2rem;
+  line-height: 1;
 }
+@media (min-width: 43.75rem) {
+  .intro__title {
+    margin-bottom: 2.125rem;
+  }
+}
+
 .intro__img img {
   margin-left: auto;
   border-radius: 15px;
@@ -132,30 +165,33 @@ body {
   .intro__img img {
     max-width: 29.875rem;
     transform: initial;
-    position: absolute;
-    top: 0;
-    right: -147px;
   }
 }
+@media (min-width: 75rem) {
+  .intro__img img {
+    max-width: 33.75rem;
+  }
+}
+
 .intro__text {
   color: #7B8BAD;
   line-height: 1.625;
   margin-bottom: 2rem;
 }
-.intro__btn {
-  margin-right: 2rem;
-}
 @media (min-width: 43.75rem) {
-  .intro__btn {
-    margin-right: 2.3125rem;
+  .intro__text {
+    margin-bottom: 2.4375rem;
   }
+}
+
+.intro__btn {
+  margin-right: 32px;
 }
 
 .intro__release {
   text-transform: uppercase;
   line-height: 1.625;
   font-weight: 700;
-  padding-top: 0.625rem;
   display: inline-block;
   color: #7B8BAD;
 }/*# sourceMappingURL=main.css.map */

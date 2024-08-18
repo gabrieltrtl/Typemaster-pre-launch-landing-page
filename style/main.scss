@@ -6,6 +6,7 @@
 // Project Start
 body {
   font-family: "Barlow", sans-serif;
+  overflow-x: hidden; // Oculta o overflow horizontal no body
 }
 
 
@@ -28,6 +29,11 @@ body {
 
 .main__container {
   overflow: hidden;
+  @include device(desktop) {
+    max-width: 1110px;
+    margin: 0 auto;
+    overflow: initial;
+  }
 }
 
 // Intro
@@ -35,8 +41,22 @@ body {
   position: relative;
   @include device(tablet) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(379px, 1fr) 1fr;
     padding: 0;
+    gap: 69px
+  }
+  @include device(desktop) {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 255px;
+      height: 240px;
+      background-color: $color5;
+      position: absolute;
+      right: -285px;
+      border-radius: 20px;
+
+    }
   }
 }
 
@@ -44,8 +64,11 @@ body {
   margin-bottom: 4rem;
   padding: 0 1.5rem;
   @include device(tablet) {
-    padding: 2.5rem 0 0 2.5rem;
+    padding: 60px 0 0 40px;
     margin-bottom: 6.25rem;
+  }
+  @include device(desktop) {
+    padding: initial;
   }
 }
 
@@ -55,7 +78,9 @@ body {
   text-transform: uppercase;
   color: $color1;
   margin-bottom: 2rem;
+  line-height: 1;
   @include device(tablet) {
+    margin-bottom: 2.125rem;
   }
 }
 
@@ -67,14 +92,12 @@ body {
     @include device(tablet) {
       max-width: 29.875rem;
       transform: initial;
-      position: absolute;
-      top: 0;
-      right: -147px;
+    }
+    @include device(desktop) {
+      max-width: 33.75rem;
     }
   }
-  @include device(tablet) {
-    
-  }
+
 }
 
 .intro__text {
@@ -82,22 +105,18 @@ body {
   line-height: 1.625;
   margin-bottom: 2rem;
   @include device(tablet) {
-
+    margin-bottom: 2.4375rem;
   }
 }
 
 .intro__btn {
-  margin-right: 2rem;
-  @include device(tablet) {
-    margin-right: 2.3125rem;
-  }
+  margin-right: 32px;
 }
 
 .intro__release {
   text-transform: uppercase;
   line-height: 1.625;
   font-weight: 700;
-  padding-top: 0.625rem;
   display: inline-block;
   color: $color2;
   @include device(tablet) {
