@@ -91,38 +91,37 @@ body {
   }
 }
 
-.main__container {
+.main__wrapper {
+  position: relative;
   overflow: hidden;
 }
-@media (min-width: 75rem) {
-  .main__container {
-    max-width: 1110px;
-    margin: 0 auto;
-    overflow: initial;
-  }
-}
-
-.intro {
-  position: relative;
-}
-@media (min-width: 43.75rem) {
-  .intro {
-    display: grid;
-    grid-template-columns: minmax(379px, 1fr) 1fr;
-    padding: 0;
-    gap: 69px;
-  }
-}
-@media (min-width: 75rem) {
-  .intro::after {
+@media (min-width: 1440px) {
+  .main__wrapper::after {
     content: "";
     display: inline-block;
     width: 255px;
     height: 240px;
     background-color: #E8EFF2;
     position: absolute;
-    right: -285px;
+    right: -120px;
+    top: 0;
     border-radius: 20px;
+  }
+}
+
+@media (min-width: 75rem) {
+  .main__container {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(379px, 1fr) 1fr;
+    padding: 0;
+    gap: 69px;
   }
 }
 
