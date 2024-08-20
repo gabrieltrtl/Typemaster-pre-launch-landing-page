@@ -226,13 +226,14 @@ body {
   .mechanical {
     grid-template-columns: minmax(214px, 1fr) minmax(445px, 1fr);
     padding: 0 39px 0 40px;
+    margin-bottom: 142px;
   }
 }
 @media (min-width: 75rem) {
   .mechanical {
     grid-template-columns: minmax(214px, auto) minmax(445px, auto) 1fr;
     max-width: 1110px;
-    margin: 0 auto;
+    margin: 0 auto 168px auto;
     padding: initial;
   }
 }
@@ -282,8 +283,18 @@ body {
   grid-column: 1/-1;
   padding: 0 24px;
 }
+@media (min-width: 43.75rem) {
+  .mechanical__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+    gap: 65px;
+  }
+}
 @media (min-width: 75rem) {
   .mechanical__content {
+    display: block;
     grid-column: initial;
     padding: initial;
     max-width: 255px;
@@ -296,17 +307,17 @@ body {
   font-weight: 900;
   color: #162542;
   text-align: center;
-  margin-bottom: 24px;
-  margin-top: 75px;
+  margin: 75px 0 24px 0;
 }
 @media (min-width: 43.75rem) {
   .mechanical__title {
-    margin-top: 72px;
+    margin: initial;
   }
 }
 @media (min-width: 75rem) {
   .mechanical__title {
     text-align: left;
+    margin-bottom: 27px;
   }
 }
 
@@ -315,7 +326,7 @@ body {
   color: #7B8BAD;
   text-align: center;
 }
-@media (min-width: 75rem) {
+@media (min-width: 43.75rem) {
   .mechanical__text {
     text-align: left;
   }
