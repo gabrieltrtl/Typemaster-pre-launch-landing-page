@@ -216,6 +216,24 @@ body {
   color: #7B8BAD;
 }
 
+.mechanical__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1440px) {
+  .mechanical__wrapper::after {
+    content: "";
+    display: inline-block;
+    width: 255px;
+    height: 240px;
+    background-color: #E8EFF2;
+    position: absolute;
+    left: -120px;
+    bottom: 168px;
+    border-radius: 20px;
+  }
+}
+
 .mechanical {
   display: grid;
   grid-template-columns: minmax(129px, 1fr) minmax(220px, 1fr);

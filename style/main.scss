@@ -136,6 +136,27 @@ body {
 }
 
 // Mechanical Section
+.mechanical__wrapper {
+  position: relative;
+  overflow: hidden;
+  @media (min-width: 1440px) {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 255px;
+      height: 240px;
+      background-color: $color5;
+      position: absolute;
+      left: -120px;
+      bottom: 168px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.mechanical__wrapper::before {
+
+}
 
 .mechanical {
   display: grid;
