@@ -147,7 +147,7 @@ body {
 }
 
 .intro__title {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
   color: #162542;
@@ -161,7 +161,7 @@ body {
 }
 @media (min-width: 75rem) {
   .intro__title {
-    font-size: 56px;
+    font-size: 3.5rem;
     margin-bottom: 1.5rem;
   }
 }
@@ -195,7 +195,7 @@ body {
 }
 @media (min-width: 75rem) {
   .intro__text {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -320,7 +320,7 @@ body {
 }
 
 .mechanical__title {
-  font-size: 32px;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: 900;
   color: #162542;
@@ -414,7 +414,7 @@ body {
 
 .features__title {
   margin-bottom: 1.5rem;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 900;
   color: #162542;
