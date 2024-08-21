@@ -238,6 +238,10 @@ body {
   @include device(tablet) {
     padding: 0px 98px 0 39px;
   }
+  @include device(desktop) {
+    padding: initial;
+   
+  }
 }
 
 .features__list {
@@ -245,6 +249,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 69px
+  }
+  @include device(desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1110px;
+    margin: 0 auto 128px auto;
   }
 }
 
@@ -299,10 +308,41 @@ body {
 
 .features__list .features__text {
   margin-bottom: 64px;
+  @include device(tablet) {
+    margin-bottom: 72px;
+  }
+  @include device(desktop) {
+    margin-bottom: initial;
+  }
 }
 
 .features__list li:last-child .features__text {
   margin-bottom: 96px;
+  @include device(tablet) {
+    margin-bottom: 142px;
+  }
+  @include device(desktop) {
+    margin-bottom: initial;
+  }
+}
+
+// Footer
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  color: $color2;
+  @include device(tablet) {
+    margin-bottom: 43px;
+  }
+  @include device(desktop) {
+    margin-bottom: 39px;
+  }
+  span {
+    font-weight: 700;
+  }
 }
 
 
