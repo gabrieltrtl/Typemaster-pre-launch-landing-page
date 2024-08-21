@@ -233,6 +233,77 @@ body {
 
 // Features Section
 
+.features {
+  padding: 0 24px;
+  @include device(tablet) {
+    padding: 0px 98px 0 39px;
+  }
+}
+
+.features__list {
+  @include device(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 69px
+  }
+}
+
+.features .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include device(tablet) {
+    align-items: start;
+  }
+}
+
+.features__img-wrapper {
+  background-color: $color3;
+  padding: 22px;
+  border-radius: 16px;
+  max-width: 65px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+  @include device(tablet) {
+    margin-bottom: 40px;
+  }
+  @include device(desktop) {
+    margin-bottom: 48px;
+  }
+}
+
+
+.features__title {
+  margin-bottom: 24px;
+  font-size: map-get($fonts, "$medium1");
+  text-transform: uppercase;
+  font-weight: 900;
+  color: $color1;
+  max-width: 200px;
+  text-align: center;
+  @include device(tablet) {
+    text-align: left;
+  }
+}
+
+.features__text {
+  text-align: center;
+  color: $color2;
+  @include device(tablet) {
+    text-align: left;
+  }
+}
+
+.features__list .features__text {
+  margin-bottom: 64px;
+}
+
+.features__list li:last-child .features__text {
+  margin-bottom: 96px;
+}
 
 
 
